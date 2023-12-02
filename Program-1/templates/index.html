@@ -4,9 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        margin-top: 60px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(31, 149, 137);
+        height: 40px;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .navbar h1 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .navbar ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .navbar li {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+      }
+
+      .navbar a:hover {
+        background-color: #555;
+      }
+    </style>
   </head>
   <body>
-    <div class="nav">
+    <div class="navbar">
+      Tindahan ni aleng Nena
       <ul>
         <li><a href="/cart">Cart</a></li>
       </ul>
@@ -14,13 +73,14 @@
     <div class="container">
       <div class="row">
         <div class="product">
-          <img src="../static/8d08605efc68a981f4042d80ac1676e5_large.png" alt="Product 1" />
+          <img
+            src="../static/8d08605efc68a981f4042d80ac1676e5_large.png"
+            alt="Product 1"
+          />
           <div class="product-details">
             <h3 class="product-name">Apple</h3>
             <p class="product-price">Price: P25</p>
-            <form
-              method="POST"
-            >
+            <form method="POST">
               <select name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
