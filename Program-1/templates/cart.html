@@ -4,12 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .products {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .item-container {
+        width: 200px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .item-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .item-container h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .item-container p {
+        margin: 0;
+        font-size: 14px;
+        color: #888;
+      }
+
+      .checkout {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .checkout h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .checkout p {
+        color: green;
+        font-weight: bold;
+        margin: 0;
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      .checkout .pay-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .total {
+        color: rgb(51, 209, 51);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <div class="products">
         <div class="item-container">
-          <img src="../static/8d08605efc68a981f4042d80ac1676e5_large.png" alt="pic not available" />
+          <img
+            src="../static/8d08605efc68a981f4042d80ac1676e5_large.png"
+            alt="pic not available"
+          />
           <h3>Apple</h3>
           <p>25</p>
           <p>Quantity: 1</p>
@@ -18,10 +107,7 @@
       <div class="checkout">
         <h2>Checkout</h2>
         <p class="total">Total Amount: P25</p>
-        <a
-          class="pay-btn"
-          >Pay Now</a
-        >
+        <a class="pay-btn">Pay Now</a>
       </div>
     </div>
   </body>
