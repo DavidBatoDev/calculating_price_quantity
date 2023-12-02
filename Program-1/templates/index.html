@@ -126,6 +126,7 @@
             <p class="product-price">Price: P{{product.product_price}}</p>
             <form
               method="POST"
+              action="{{ url_for('add_to_cart', product_id=product.product_id) }}"
             >
               <select name="quantity">
                 <option value="1">1</option>
