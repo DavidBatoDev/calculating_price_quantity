@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    This is program 2
-</body>
+  </head>
+  <body>
+    <form method="POST">
+      <label for="money">Enter your money:</label>
+      <input type="text" name="money" />
+      <label for="apple_price">Enter the price of an apple:</label>
+      <input type="text" name="apple_price" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+    <div class="checkout">
+      <div>Apples you can buy: <strong>0</strong></div>
+      <div>Your change: <strong>0</strong></div>
+    </div>
+  </body>
 </html>
