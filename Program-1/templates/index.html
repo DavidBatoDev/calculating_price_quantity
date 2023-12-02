@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li><a href="/cart">Cart</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="product">
+          <img src="../static/8d08605efc68a981f4042d80ac1676e5_large.png" alt="Product 1" />
+          <div class="product-details">
+            <h3 class="product-name">Apple</h3>
+            <p class="product-price">Price: P25</p>
+            <form
+              method="POST"
+            >
+              <select name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+              <input type="submit" value="Add to Cart" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
