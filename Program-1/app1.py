@@ -21,9 +21,11 @@ products = [
 
 cart = []
 
+
 @app.route("/")
 def index():
     return render_template("index.html", products=products)
+
 
 @app.route("/add_to_cart/<int:product_id>", methods=["POST"])
 def add_to_cart(product_id):
@@ -51,13 +53,20 @@ def add_to_cart(product_id):
                 }
             )
             flash("Product added to cart")
-    print (cart)
+    print(cart)
     return redirect(url_for("index"))
 
 
 @app.route("/cart")
 def show_cart():
-    return render_template("cart.html", cart=cart)
+    total_price = 0
+
+    for item in cart:
+        product_price = int(item["product_price"])
+        product_quantity = item["product_quantity"]
+        total_price += product_price * product_quantity
+
+    return render_template("cart.html", cart=cart, total=total_price)
 
 
 if __name__ == "__main__":
