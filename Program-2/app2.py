@@ -6,6 +6,9 @@ app = Flask(__name__)
 def get_max_apples(money, apple_price):
     return int(money / apple_price)
 
+def calculate_remaining_money(money, apple_price):
+    return money % apple_price
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
