@@ -118,15 +118,15 @@
     </div>
     <div class="container">
       <div class="row">
+        {% for product in products %}
         <div class="product">
-          <img
-            src="../static/8d08605efc68a981f4042d80ac1676e5_large.png"
-            alt="Product 1"
-          />
+          <img src="{{product.product_image}}" alt="Product 1" />
           <div class="product-details">
-            <h3 class="product-name">Apple</h3>
-            <p class="product-price">Price: P25</p>
-            <form method="POST">
+            <h3 class="product-name">{{product.product_name}}</h3>
+            <p class="product-price">Price: P{{product.product_price}}</p>
+            <form
+              method="POST"
+            >
               <select name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -142,30 +142,7 @@
             </form>
           </div>
         </div>
-        <div class="product">
-          <img
-            src="../static/8d08605efc68a981f4042d80ac1676e5_large.png"
-            alt="Product 1"
-          />
-          <div class="product-details">
-            <h3 class="product-name">Apple</h3>
-            <p class="product-price">Price: P25</p>
-            <form method="POST">
-              <select name="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-              </select>
-              <input type="submit" value="Add to Cart" />
-            </form>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </body>
