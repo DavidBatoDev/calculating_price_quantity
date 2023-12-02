@@ -57,7 +57,7 @@ def add_to_cart(product_id):
 
 @app.route("/cart")
 def show_cart():
-    return render_template("cart.html")
+    return render_template("cart.html", cart=cart)
 
 
 if __name__ == "__main__":
